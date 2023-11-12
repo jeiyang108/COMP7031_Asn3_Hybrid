@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="dist/js/bootstrap.bundle.min.js"></script>
+        <title>Hybrid App</title>
+    </head>
+    <body>
+        <div align="middle">
+            <img id="imageView" src="dist/empty_image.jpg" width="250px" height="350px">
+        </div>
+        <br/>
+        <div style="text-align:center;">
+            <button type="button" class="btn btn-primary camera-btn" id="cameraButton"
+                    onclick="takePhoto()">Camera</button>
+        </div>
+        <script type="text/javascript">
+         function takePhoto() {
+            Android.launchCamera();
+         }
+         function displayPhotoJavaScript(fullPath) {
+            document.getElementById("imageView").src = fullPath;
+         }
+        </script>
+    </body>
+
+</html>
